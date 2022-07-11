@@ -1,0 +1,158 @@
+/*
+font-family: 'Barlow', sans-serif;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Barlow', sans-serif;
+}
+img{
+    height: 80px;
+    border-radius: 50%;
+}
+header{
+    background: linear-gradient(to right, rgb(116, 227, 241),rgb(134, 252, 134));
+    height: 80px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.nav{
+    display:flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+}
+.soy{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 15px;
+    padding: 5px 10px;
+    margin: 0 0 10px;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+}
+.nav-menu__superior-item a{
+    color: #000;
+}
+.nav-menu__superior-item{
+    font-size: 18px;
+    margin: 2px 8px;
+    line-height: 40px;
+    width: max-content;
+    padding: 2px 4px;
+}
+.nav-menu__superior-item:hover{
+    border-radius: 15px;
+    background-color: rgb(86, 228, 86);
+    transition: .5s;
+}
+.fa-instagram, .fa-twitter, .fa-github{
+    color: #fff;
+}
+.nav-menu__inferior-item{
+    font-size: 18px;
+    margin: 0 8px;
+    line-height: 30px;
+    border-radius: 50%;
+    padding: 0 8px;  
+}
+.logo-instagram{
+    background: linear-gradient(30deg, rgb(247, 234, 56),rgb(239, 62, 252));
+    color: #fff;
+}
+.logo-twitter{
+    background: rgb(62, 193, 245);
+    color: #fff;
+}
+.logo-github{
+    background: #000;
+    color: #fff;
+}
+.nav-menu__superior{
+    display: flex;
+}
+.nav-menu__inferior{
+    display: flex;
+    justify-content: end;
+}
+section{
+    height: 100vh;
+}
+.section-1{
+    background-image: url(FondoPorta.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.section-1__h1{
+    padding: 10%;
+    font-size: 3em;
+    color: #fff;
+}
+.nav-toggle{
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .header{
+        height: 80px;
+    }
+    .nav-menu__superior{
+        flex-direction: column;
+        align-items: center;
+        text-transform: uppercase;
+        margin: 0;
+        background-color: #242526ee;
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        left: 100%; 
+        transition: left .3s;
+    }
+    .nav-menu__superior-item a{
+        color: #fff;
+    }
+    .nav-menu__superior-item{
+        line-height: 70px;
+    }
+    .nav-menu__superior-item:hover{
+        background: none;
+    }
+    .nav-menu__superior-item a:active{
+        color: rgb(53, 195, 252);
+    }
+    .nav-toggle{
+        display: block;
+    }
+    .nav-menu__inferior{
+        display: none;
+    }
+    .nav-menu_visible {
+        left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible){
+        outline: none;
+    }
+}
